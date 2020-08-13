@@ -26,10 +26,10 @@ public class Exercise21_1 {
         System.out.println(one + ": only present in Hashset 1.");
 
         // Created new HashSets to deduct value's if equal
-        Set four = new HashSet<>(keywordSet2);
-        four.removeAll(keywordSet1);
+        Set two = new HashSet<>(keywordSet2);
+        two.removeAll(keywordSet1);
         // Prints out the words only found in set 2
-        System.out.println(four + ": only present in Hashset 2.");
+        System.out.println(two + ": only present in Hashset 2.");
 
         // check if an element is present in both strings
         for (final String element : keywordSet1) {

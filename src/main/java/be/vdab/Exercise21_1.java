@@ -28,10 +28,10 @@ public class Exercise21_1 {
         System.out.println(four + ": only present in HashSet 2.");
 
         // check if an element is present in both strings
-        for (final String element2 : keywordSet1) {
+        for (final String element : keywordSet1) {
             // if second set has the current element
-            if (keywordSet2.contains(element2)) {
-                System.out.println(element2 + ": present in both HashSets.");
+            if (keywordSet2.contains(element)) {
+                System.out.println(element + ": present in both HashSets.");
             }
         }
     }

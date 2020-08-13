@@ -25,6 +25,7 @@ public class Exercise21_4 {
 
         str = str.toLowerCase();
 
+        // for loop to go through the word letter for letter, switch case to keep track of vowel counts
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
 
@@ -54,6 +55,7 @@ public class Exercise21_4 {
     // Main
     public static void main(String[] args) throws IOException {
 
+        // variable's to read the input file"
         FileReader reader = null;
         String line = null;
 
@@ -65,6 +67,7 @@ public class Exercise21_4 {
             e.printStackTrace();
         }
 
+        // buffers the input file in case it's very large
         BufferedReader bf = new BufferedReader(reader);
         while ((line = bf.readLine()) != null) {
             list.add(bf.readLine());

@@ -7,9 +7,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Exercise21_4 {
-    private static int vowels = 0;
-    private static int consonants = 0;
+    // variables
+    private static int vowelsA = 0;
+    private static int vowelsE = 0;
+    private static int vowelsI = 0;
+    private static int vowelsO = 0;
+    private static int vowelsU = 0;
 
+   // method to count vowels and consonants
     public static void countVowelsAndConsonants(String str) {
 
         // check if string is not empty
@@ -22,36 +27,56 @@ public class Exercise21_4 {
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                vowels++;
-            } else if ((ch >= 'a' && ch <= 'z')) {
-                consonants++;
+
+            switch (ch) {
+                case 'a':
+                    vowelsA++;
+            }
+            switch (ch) {
+                case 'e':
+                    vowelsE++;
+            }
+            switch (ch) {
+                case 'i':
+                    vowelsI++;
+            }
+            switch (ch) {
+                case 'o':
+                    vowelsO++;
+            }
+            switch (ch) {
+                case 'u':
+                    vowelsU++;
             }
         }
     }
 
+    // Main
     public static void main(String[] args) throws IOException {
+
         FileReader reader = null;
         String line = null;
 
+        // put text file into new array list
         ArrayList<String> list = new ArrayList<>();
         try {
             reader = new FileReader("testCollection.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        BufferedReader bf = new BufferedReader(reader);
 
+        BufferedReader bf = new BufferedReader(reader);
         while ((line = bf.readLine()) != null) {
             list.add(bf.readLine());
         }
 
-        // printing the unsorted ArrayList
+        // printing the ArrayList and total count of vowels
         System.out.println("Input Text: " + list);
         countVowelsAndConsonants(list.toString());
-        System.out.println("Vowels: " + vowels);
-        System.out.println("Consonants: " + consonants);
-
-
+        System.out.println("Amount of A's: " + vowelsA);
+        System.out.println("Amount of E's: " + vowelsE);
+        System.out.println("Amount of I's: " + vowelsI);
+        System.out.println("Amount of O's: " + vowelsO);
+        System.out.println("Amount of U's: " + vowelsU);
     }
 }

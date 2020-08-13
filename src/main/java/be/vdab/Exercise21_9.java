@@ -23,6 +23,7 @@ public class Exercise21_9 {
             return userInputState;
         }
     }
+
     public static void main(String[] args) {
         //System.out.println(MappingStatesToCapitols.fillHashMap());
         AskUserPrompt.userInputState();

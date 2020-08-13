@@ -15,7 +15,7 @@ public class Exercise21_1 {
         Set<String> keywordSet1 = new HashSet<>(Arrays.asList(keywordString1));
         Set<String> keywordSet2 = new HashSet<>(Arrays.asList(keywordString2));
 
-        // Check if an element is present in both strings then removing an entry in set one if its found in set two
+        // Created new HashSets to deduct value's if equal
         Set one = new HashSet<>(keywordSet1);
         Set two = new HashSet<>(keywordSet2);
         one.removeAll(keywordSet2);
@@ -24,7 +24,7 @@ public class Exercise21_1 {
         // Prints out the words only found in set 1
         System.out.println(one + ": only present in HashSet 1.");
 
-        // Check if an element is present in both strings then removing an entry in set four if its found in set three
+        // Created new HashSets to deduct value's if equal
         Set three = new HashSet<>(keywordSet1);
         Set four = new HashSet<>(keywordSet2);
         three.removeAll(keywordSet2);

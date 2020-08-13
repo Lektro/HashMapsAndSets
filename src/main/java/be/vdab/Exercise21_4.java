@@ -62,7 +62,7 @@ public class Exercise21_4 {
         // put text file into new array list
         ArrayList<String> list = new ArrayList<>();
         try {
-            reader = new FileReader("testCollection.txt");
+            reader = new FileReader("alice.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

@@ -73,9 +73,13 @@ public class Exercise21_4 {
             list.add(bf.readLine());
         }
 
-        // printing the ArrayList and total count of vowels
+        // printing the ArrayList fully.
         System.out.println("Input Text: " + list);
+
+        // count vowels and consonants in the give text file
         countVowelsAndConsonants(list.toString());
+
+        // prints out the results
         System.out.println("Amount of A's: " + vowelsA);
         System.out.println("Amount of E's: " + vowelsE);
         System.out.println("Amount of I's: " + vowelsI);

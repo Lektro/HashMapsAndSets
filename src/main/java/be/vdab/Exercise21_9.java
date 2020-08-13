@@ -2,6 +2,7 @@ package be.vdab;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Exercise21_9 {
 
@@ -12,12 +13,20 @@ public class Exercise21_9 {
             hashMap.put("Alabama", "Montgomery");
             return String.valueOf(hashMap);
         }
-
     }
 
+    public static class AskUserPrompt {
+        private static String userInputState() {
+            System.out.println("Enter a valid USA State: ");
+            Scanner sc = new Scanner(System.in);
+            String userInputState = sc.nextLine();
+            return userInputState;
+        }
+    }
     public static void main(String[] args) {
-        System.out.println(MappingStatesToCapitols.fillHashMap());
-
+        //System.out.println(MappingStatesToCapitols.fillHashMap());
+        AskUserPrompt.userInputState();
+        System.out.println();
     }
 
 }

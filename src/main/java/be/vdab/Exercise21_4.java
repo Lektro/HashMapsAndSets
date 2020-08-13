@@ -48,7 +48,6 @@ public class Exercise21_4 {
 
         // printing the unsorted ArrayList
         System.out.println("Input Text: " + list);
-        System.out.println("String.charAt() solution:");
         countVowelsAndConsonants(list.toString());
         System.out.println("Vowels: " + vowels);
         System.out.println("Consonants: " + consonants);
